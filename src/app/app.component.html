@@ -1,4 +1,10 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<ul>
+  <li *ngFor="let detail of details" (click)="showdetails(detail)" [ngClass]="selectedDetail && selectedDetail.id==detail.id?'highlightselected':''">{{detail.id}}</li>
+</ul>
+<div *ngIf="selectedDetail">
+  <p>ID:{{selectedDetail.id}}</p>
+  <p>Name:{{selectedDetail.name}}</p>
+  <p>Age:{{selectedDetail.age}}</p>
+</div>
+
+<!-- clear button to clear selectedDetail, details next to number, change ngClass to ngStyle-->
