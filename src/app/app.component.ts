@@ -17,4 +17,8 @@ export class AppComponent  {
 showdetails(details){
   this.selectedDetail = details;
 }
+
+clear(){
+  this.selectedDetail='';
+}
 }

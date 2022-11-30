@@ -1,10 +1,31 @@
-<ul>
-  <li *ngFor="let detail of details" (click)="showdetails(detail)" [ngClass]="selectedDetail && selectedDetail.id==detail.id?'highlightselected':''">{{detail.id}}</li>
-</ul>
-<div *ngIf="selectedDetail">
-  <p>ID:{{selectedDetail.id}}</p>
-  <p>Name:{{selectedDetail.name}}</p>
-  <p>Age:{{selectedDetail.age}}</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ul>
+        <li
+          *ngFor="let detail of details"
+          (click)="showdetails(detail)"
+          [ngClass]="
+            selectedDetail && selectedDetail.id == detail.id
+              ? 'highlightselected'
+              : ''
+          "
+        >
+          {{ detail.id }}
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <div *ngIf="selectedDetail">
+        <p>ID:{{ selectedDetail.id }}</p>
+        <p>Name:{{ selectedDetail.name }}</p>
+        <p>Age:{{ selectedDetail.age }}</p>
+      </div>
+    </div>
+    <div class="col" *ngIf="selectedDetail">
+      <button class="btn btn-primary" (click)="clear()">Clear</button>
+    </div>
+  </div>
 </div>
 
 <!-- clear button to clear selectedDetail, details next to number, change ngClass to ngStyle-->
