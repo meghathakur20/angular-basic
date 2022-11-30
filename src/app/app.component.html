@@ -1,6 +1,8 @@
 <div class="container">
   <div class="row">
+    
     <div class="col">
+    <nav>
       <ul>
         <li class="list"
           *ngFor="let detail of details"
@@ -14,7 +16,9 @@
           {{ detail.id }}
         </li>
       </ul>
+    </nav>
     </div>
+  
     <div class="col">
       <div *ngIf="selectedDetail">
         <p>ID:{{ selectedDetail.id }}</p>
