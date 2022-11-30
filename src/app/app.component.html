@@ -1,24 +1,12 @@
-<div class="container">
-  <div class="row">
-    
-    <div class="col">
-    <nav>
-      <ul>
-        <li class="list"
-          *ngFor="let detail of details"
-          (click)="showdetails(detail)"
-          [ngClass]="
-            selectedDetail && selectedDetail.id == detail.id
-              ? 'highlightselected'
-              : ''
-          "
-        >
-          {{ detail.id }}
-        </li>
-      </ul>
-    </nav>
-    </div>
-  
+  <app-user-list [parentUserDetail]="details" [parentSelectedDetail2]="selectedDetail" (childSelectedDetail)="showdetails($event)">
+    </app-user-list>
+    <app-user-details
+      [parentSelectedDetail]="selectedDetail"
+    ></app-user-details>
+    <app-clear-user-details [parentSelectedDetail1]="selectedDetail" 
+    (clearParentData)="clear($event)"
+    ></app-clear-user-details>
+    <!-- 
     <div class="col">
       <div *ngIf="selectedDetail">
         <p>ID:{{ selectedDetail.id }}</p>
@@ -26,10 +14,9 @@
         <p>Age:{{ selectedDetail.age }}</p>
       </div>
     </div>
-    <div class="col" *ngIf="selectedDetail">
-      <button class="btn btn-primary" (click)="clear()">Clear</button>
-    </div>
-  </div>
+  
+   
 </div>
-
-<!-- clear button to clear selectedDetail, details next to number, change ngClass to ngStyle-->
+-->
+    <!-- clear button to clear selectedDetail, details next to number, change ngClass to ngStyle-->
+  

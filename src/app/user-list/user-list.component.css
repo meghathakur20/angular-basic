@@ -1,0 +1,11 @@
+.list {
+  list-style-type: none;
+  font-weight: bold;
+}
+.highlightselected {
+  color: white;
+}
+
+nav {
+  background-color: gainsboro;
+}
