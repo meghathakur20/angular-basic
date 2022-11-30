@@ -4,3 +4,7 @@ p {
 .highlightselected{
   color: blue;
 }
+.list{
+  list-style-type: none;
+  font-weight: bold;
+}
