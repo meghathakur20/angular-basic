@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-submit-selection',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-submit-selection.component.css']
 })
 export class UserSubmitSelectionComponent implements OnInit {
-
+@Input('userSubmitSelection') selectedDetails:any;
   constructor() { }
 
   ngOnInit() {
