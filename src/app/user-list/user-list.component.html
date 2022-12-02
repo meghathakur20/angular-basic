@@ -1,6 +1,6 @@
 
-  <ul style="background-color:lightgrey; border-radius:20px">
-    <li 
+  <ul style=" border-radius:20px; padding: 0px;">
+    <li  style=" border-radius:20px; border:1px black solid"
       class="list"
       *ngFor="let detail of details3"
       (click)="showdetails(detail)"
@@ -10,7 +10,7 @@
       [ngStyle]="{
         'background-color':
           selectedDetail1 && selectedDetail1.id == detail.id ? 'lightgreen' : '',
-        padding: selectedDetail1 && selectedDetail1.id == detail.id ? '4px' : ''
+        padding: selectedDetail1 && selectedDetail1.id == detail.id ? '10px' : ''
       }"
       [ngClass]="
         selectedDetail1 && selectedDetail1.id == detail.id
