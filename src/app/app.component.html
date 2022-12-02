@@ -1,24 +1,31 @@
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-  <app-user-list [parentUserDetail]="details" [parentSelectedDetail2]="selectedDetail" (childSelectedDetail)="showdetails($event)">
-    </app-user-list>
-  </div>
-      <div class="col-4">
-    <app-user-details
-      [parentSelectedDetail]="selectedDetail"
-    ></app-user-details>
-  
-</div>
-<div class="col-4">
-    <app-clear-user-details [parentSelectedDetail1]="selectedDetail" 
-    (clearParentData)="clear($event)"
-    ></app-clear-user-details>
+<div class="container">
+  <div class="row">
     <div class="col-4">
+      <app-user-list
+        [parentUserDetail]="details"
+        [parentSelectedDetail2]="selectedDetail"
+        (childSelectedDetail)="showdetails($event)"
+      >
+      </app-user-list>
+    </div>
+    <div class="col-4">
+      <app-user-details
+        [parentSelectedDetail]="selectedDetail"
+      ></app-user-details>
+    </div>
+    <div class="col-2">
+      <app-clear-user-details
+        [parentSelectedDetail1]="selectedDetail"
+        (clearParentData)="clear($event)"
+      ></app-clear-user-details>
+    </div>
+    <div class="col-2">
+      <app-user-submit-selection></app-user-submit-selection>
+    </div>
   </div>
-  </div>
-    <!-- 
+</div>
+
+<!-- 
     <div class="col">
       <div *ngIf="selectedDetail">
         <p>ID:{{ selectedDetail.id }}</p>
@@ -30,5 +37,4 @@
    
 </div>
 -->
-    <!-- clear button to clear selectedDetail, details next to number, change ngClass to ngStyle-->
-  
+<!-- clear button to clear selectedDetail, details next to number, change ngClass to ngStyle-->
