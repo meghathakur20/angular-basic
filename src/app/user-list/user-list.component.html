@@ -1,28 +1,24 @@
 
-  <div>
-    <nav>
-      <ul>
-        <li
-          class="list"
-          *ngFor="let detail of details3"
-          (click)="showdetails(detail)"
-          [style.background-color]="
-            selectedDetail1 && selectedDetail1.id != detail.id ? 'white' : ''
-          "
-          [ngStyle]="{
-            'background-color':
-              selectedDetail1 && selectedDetail1.id == detail.id ? 'blue' : '',
-            padding:
-              selectedDetail1 && selectedDetail1.id == detail.id ? '4px' : ''
-          }"
-          [ngClass]="
-            selectedDetail1 && selectedDetail1.id == detail.id
-              ? 'highlightselected'
-              : ''
-          "
-        >
-          {{ detail.id }}
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <ul style="background-color:lightgrey; border-radius:20px">
+    <li 
+      class="list"
+      *ngFor="let detail of details3"
+      (click)="showdetails(detail)"
+      [style.background-color]="
+        selectedDetail1 && selectedDetail1.id != detail.id ? 'white' : ''
+      "
+      [ngStyle]="{
+        'background-color':
+          selectedDetail1 && selectedDetail1.id == detail.id ? 'lightgreen' : '',
+        padding: selectedDetail1 && selectedDetail1.id == detail.id ? '4px' : ''
+      }"
+      [ngClass]="
+        selectedDetail1 && selectedDetail1.id == detail.id
+          ? 'highlightselected'
+          : ''
+      "
+    >
+      {{ detail.id }}
+    </li>
+  </ul>
+
