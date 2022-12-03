@@ -4,8 +4,8 @@ import { UserLandingComponent } from './user-landing/user-landing.component';
 ;
 
 const routes: Routes = [
-  {path:'', component:UserLandingComponent},
-  {}
+  {path:'', component:UserLandingComponent}
+
 ]; 
 
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class UserDetailsRoutingModule { }
