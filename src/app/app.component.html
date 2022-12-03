@@ -1,32 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-4">
-      <app-user-list
-        [parentUserDetail]="details"
-        [parentSelectedDetail2]="selectedDetail"
-        (childSelectedDetail)="showdetails($event)"
-      >
-      </app-user-list>
-    </div>
-    <div class="col-4">
-      <app-user-details
-        [parentSelectedDetail]="selectedDetail"
-      ></app-user-details>
-    </div>
-    <div class="col-2">
-      <app-clear-user-details
-        [parentSelectedDetail1]="selectedDetail"
-        (clearParentData)="clear($event)"
-      ></app-clear-user-details>
-    </div>
-    <div class="col-2">
-      <app-user-submit-selection
-      [userSubmitSelection]="selectedDetail"
-      
-      ></app-user-submit-selection>
-    </div>
-  </div>
+
+<div>
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a routerLink="/userdetails">User Details</a></li>
+    <li><a routerLink="/useractions">User Actions</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
 </div>
+<router-outlet></router-outlet>
+
 
 <!-- 
     <div class="col">
