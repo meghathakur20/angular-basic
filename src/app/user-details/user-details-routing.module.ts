@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserLandingComponent } from './user-landing/user-landing.component';
+import { UserDetailsComponent } from './user-details.component';
+
 ;
 
 const routes: Routes = [
-  {path:'', component:UserLandingComponent}
+  {path:'', component:UserDetailsComponent}
 
 ]; 
 
