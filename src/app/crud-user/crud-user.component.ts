@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudUserService } from './crud-user.service';
 
 @Component({
   selector: 'app-crud-user',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private crudUserService:CrudUserService) { }
 
   ngOnInit() {
+    this.crudUserService.getDetails().subscribe(
+      (res)=>{
+        console.log(res);
+      }
+    )
   }
 
 }
