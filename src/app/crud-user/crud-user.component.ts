@@ -8,13 +8,18 @@ import { CrudUserService } from './crud-user.service';
 })
 export class CrudUserComponent implements OnInit {
 
+  data:any=[];
+
+  
   constructor(private crudUserService:CrudUserService) { }
 
   ngOnInit() {
     this.crudUserService.getDetails().subscribe(
-      (res)=>{
+      (res:any)=>{
         console.log(res);
+        this.data=res.results;
       }
+      
     )
   }
 

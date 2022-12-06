@@ -2,3 +2,7 @@
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+
+thead,tr,td{
+  border: 1px solid black;
+}

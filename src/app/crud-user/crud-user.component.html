@@ -1,0 +1,29 @@
+<div *ngFor="let result of data">
+  <span>
+    Package Name - {{result.package.name}} <br>
+    Score - {{result.score.final}}  <br>
+    Search Score- {{result.searchScore}}
+  </span>
+
+  <table>
+    <tr>
+  <th>Keywords</th>
+    </tr>
+  <ng-container *ngIf=" result.package.keywords &&
+  result.package.keywords.length>0"> 
+  <tr *ngFor="let keyword of result.package.keywords">
+    <td >{{keyword}}</td>
+  </tr>
+ </ng-container> 
+ <ng-container *ngIf="!result.package.keywords"> 
+  <tr >
+    <td >No records found</td>
+  </tr>
+ </ng-container> 
+  </table>
+    
+   
+  
+  
+</div>
+
