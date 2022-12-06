@@ -1,5 +1,6 @@
-<div *ngFor="let result of data">
+<div *ngFor="let result of data;let i=index">
   <span>
+    Index number - {{i}}<br> 
     Package Name - {{result.package.name}} <br>
     Score - {{result.score.final}}  <br>
     Search Score- {{result.searchScore}}
